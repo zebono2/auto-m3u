@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+## load the settings file ##
+
+source src/settings
+
+echo Settings Loaded
+
+## run the Google scrape ##
+
+#source src/googlelinks
+###COMMENTED OUT SO GOOGLE DONT ###
+### BAN US WHILE TESTING ###
+
+
+
+
+
+## run the wget script ##
+
+source src/wget
+
+## run the grep script ##
+
+source src/grep
+
+## number of links found display ##
+
+printf "\e[33m$nlinks links extracted\033[0m"
+echo  
+
+source src/avprobe
+
+## CODE IS GOOD UP TO THIS POINT ##
+
+
