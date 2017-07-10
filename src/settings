@@ -1,0 +1,52 @@
+##### Auto-m3u Settings ####
+
+## SETTINGS THAT CAN BE CHANGED ##
+
+# IF YOU WANT TO SCRIPT TO ONLY
+#RUN IN THE ONE FOLDER
+# default false
+notmp="false"
+
+## NUMBER OF GOOGLE LINKS TO SCRAPE ##
+# Max amount 100
+# default 10
+nlinks="10"
+
+## TEMP FOLDER ##
+# location of the temp files
+# default location /tmp/
+tmpfolder="/tmp"
+
+
+
+# DONT CHANG BELOW SETTINGS IF YOU
+# DONT KNOW WHAT THERE FOR AS ANY
+# CHANGES MAY CAUSE THE SCRIPT TO
+# FAIL
+
+## Directory settings ##
+
+# Temp folder #
+tmp="/tmp/auto-m3u"
+tmplinks="/tmp/auto-m3u/links"
+tmpdl="/tmp/auto-m3u/links/dl"
+tmpdl2="/tmp/auto-m3u/links/do/"
+
+# make folders if required #
+mkdir $tmp
+mkdir $tmplinks
+mkdir $tmpdl
+
+
+
+## SET SOME VALUABLES ##
+
+pblinks="$tmplinks/pblinks.txt"
+dirtylinks="$tmplinks/dirtylinks.txt"
+listlinks="$tmplinks/list.txt"
+
+
+## MAKE SOME REQUIRED FILES ##
+
+touch $dirtylinks
+

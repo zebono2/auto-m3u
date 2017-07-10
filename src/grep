@@ -1,0 +1,30 @@
+echo start grep script
+
+echo getting m3u8 links
+#grep -Eo '(http|https|rtmp|rtsp|sap|tcp|tls|udp|mmsh)://[a-zA-Z0-9:0-9./?=_@%-]*\.m3u8' $listlinks | sort -u > \
+#$tmplinks/cleanliness.txt
+
+echo getting m3u links
+grep -Eo '(http|https|rtmp|rtsp|sap|tcp|tls|udp|mmsh)://[a-zA-Z0-9:0-9./?=_@%-]*\.m3u' $listlinks | sort -u >> \
+$tmplinks/cleanliness.txt
+
+echo getting mp4 links
+grep -Eo '(http|https|rtmp|rtsp|sap|tcp|tls|udp|mmsh)://[a-zA-Z0-9:0-9./?=_@%-]*\.mp4' $listlinks | sort -u >> \
+$tmplinks/cleanliness.txt
+
+echo getting ch links
+grep -Eo '(http|https|rtmp|rtsp|sap|tcp|tls|udp|mmsh)://[a-zA-Z0-9:0-9./?=_@%-]*\.ch' $listlinks | sort -u >> \
+$tmplinks/cleanliness.txt
+
+echo getting ts links
+grep -Eo '(http|https|rtmp|rtsp|sap|tcp|tls|udp|mmsh)://[a-zA-Z0-9:0-9./?=_@%-]*\.ts' $listlinks | sort -u >> \
+$tmplinks/cleanliness.txt
+
+echo getting sh links
+grep -Eo '(http|https|rtmp|rtsp|sap|tcp|tls|udp|mmsh)://[a-zA-Z0-9:0-9./?=_@%-]*\.sh' $listlinks | sort -u >> \
+$tmplinks/cleanliness.txt
+
+nlinks=$(wc -l < $tmplinks/cleanliness.txt)
+
+echo end grep script
+

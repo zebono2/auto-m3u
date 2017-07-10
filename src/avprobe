@@ -1,0 +1,11 @@
+## testing the links
+
+IFS=' '
+while read line
+do
+echo testing $line
+avprobe -loglevel quiet "$line" > /dev/null 2>&1 \
+&& echo link working && \
+echo $line >> $tmplinks/working.txt \
+|| echo link dead
+done < $tmplinks/cleanliness.txt
