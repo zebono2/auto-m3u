@@ -1,0 +1,10 @@
+## DOWNLOAD GOOGLE LINKS TO A FILE ##
+
+echo start wget script
+
+wget -O $tmplinks/list.txt -i $pblinks
+
+# download links from /tmp/auto-m3u/list/pblinks.txt
+# to /tmp/auto-m3u/links/list.txt
+
+echo end the wget script
